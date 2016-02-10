@@ -15,12 +15,13 @@
   "author": "Alexander Eck-Zimmer",
   "license": "ISC",
   "dependencies": {
-    "ansi-escape-sequences": "^2.2.2",
     "camelcase": "^2.1.0",
     "chalk": "^1.1.1",
     "command-line-args": "^2.1.4",
     "exit": "^0.1.2",
     "eyes": "^0.1.8",
-    "lodash": "^4.3.0"
+    "fs": "0.0.2",
+    "lodash": "^4.3.0",
+    "rimraf": "^2.5.1"
   }
 }
