@@ -21,7 +21,7 @@ folders.copySourceFiles(options.sourceFolder, options.buildFolder);
 npm.installDependencies(options.buildFolder);
 
 if (options.versionFile) {
-    version.createVersionsFile(path.normalize(options.buildFolder + '/' + options.versionFile));
+    version.createVersionsFile(path.normalize(options.buildFolder + '/' + options.versionFile), options.message);
 } else {
     log.log('no version file generated (no filename given).');
 }
