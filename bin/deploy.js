@@ -7,14 +7,15 @@ var folders = require('../lib/folders');
 var npm = require('../lib/npm');
 var version = require('../lib/version');
 
-var options = {};
+var options;
 
 
 options = cmdLineArgs.processCommandLineArgs();
 
-eyes.inspect(options);
+//eyes.inspect(options);
 
-folders.clearBuildFolder(options.buildFolder);
+
+folders.clearBuildBaseFolder(options.buildBaseFolder);
 
 folders.copySourceFiles(options.sourceFolder, options.buildFolder);
 
@@ -26,5 +27,7 @@ if (options.versionFile) {
     log.log('no version file generated (no filename given).');
 }
 
-
-log.success('Build finished.');
+folders.package(options.buildFolder, options.deploymentFile, function () {
+    log.success('deployment package ' + options.deploymentFile + ' ready to be deployed');
+    log.success('Build finished.');
+});
