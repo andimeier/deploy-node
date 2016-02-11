@@ -1,6 +1,7 @@
 #! /usr/bin/env node
 var path = require('path');
 var eyes = require('eyes');
+var ansi = require('ansi-escape-sequences');
 var cmdLineArgs = require('../lib/options');
 var log = require('../lib/log');
 var folders = require('../lib/folders');
@@ -28,6 +29,6 @@ if (options.versionFile) {
 }
 
 folders.package(options.buildFolder, options.deploymentFile, function () {
-    log.success('deployment package ' + options.deploymentFile + ' ready to be deployed');
+    log.log(ansi.format('deployment package [green]{' + options.deploymentFile + '} ready to be deployed'));
     log.success('Build finished.');
 });
