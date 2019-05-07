@@ -1,7 +1,8 @@
-js-deploy
+deploy-node
 ===========
 
-Deploys Javascript applications.
+Deploys Javascript applications. To be used as a npm script because some properties will be drawn 
+from the environment variables which `npm` adds for the scripts.
 
 At the moment, it simply builds a node application, the result being:
 

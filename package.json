@@ -1,6 +1,6 @@
 {
   "name": "@andimeier/deploy-node",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Deployment made easy for node projects",
   "main": "lib/deploy.js",
   "bin": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type" : "git",
-    "url" : "https://github.com/andimeier/deploy"
+    "url" : "https://github.com/andimeier/deploy-node"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
