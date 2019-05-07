@@ -1,5 +1,5 @@
 {
-  "name": "deploy-node",
+  "name": "@andimeier/deploy-node",
   "version": "0.0.1",
   "description": "Deployment made easy for node projects",
   "main": "lib/deploy.js",
