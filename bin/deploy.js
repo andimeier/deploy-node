@@ -1,6 +1,5 @@
 #! /usr/bin/env node
 var path = require('path');
-var eyes = require('eyes');
 var ansi = require('ansi-escape-sequences');
 var cmdLineArgs = require('../lib/options');
 var log = require('../lib/log');
@@ -13,7 +12,7 @@ var options;
 
 options = cmdLineArgs.processCommandLineArgs();
 
-//eyes.inspect(options);
+//Xeyes.inspect(options);
 
 
 folders.clearBuildBaseFolder(options.buildBaseFolder);
@@ -23,7 +22,7 @@ folders.copySourceFiles(options.sourceFolder, options.buildFolder);
 npm.installDependencies(options.buildFolder);
 
 if (options.versionFile) {
-    version.createVersionsFile(path.normalize(options.buildFolder + '/' + options.versionFile), options.message);
+    version.createVersionsFile(path.join(options.buildFolder, options.versionFile), options.version, options.message);
 } else {
     log.log('no version file generated (no filename given).');
 }
