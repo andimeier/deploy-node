@@ -1,13 +1,12 @@
-deploy-node
-===========
+# deploy-node
 
-Deploys Javascript applications. To be used as a npm script because some properties will be drawn 
+Deploys Javascript applications. To be used as a npm script because some properties will be drawn
 from the environment variables which `npm` adds for the scripts.
 
 At the moment, it simply builds a node application, the result being:
 
-* a build folder cointaining the executable application
-* a tar.gz file containing the targz'ed build folder (this is the "deployment package")
+- a build folder cointaining the executable application
+- a tar.gz file containing the targz'ed build folder (this is the "deployment package")
 
 ## Folder structure
 
@@ -32,10 +31,10 @@ while the deployment package is
 
 `deploy-node` will perform the following steps:
 
-* copy all source files to the `dist` folder in a subfolder named after the project, e.g. `dist/PROJECT_v1.0.0`
-* install `node_modules` with `--production` flag, so only the production dependencies are installed
-* generate a version file
-* targz the folder
+- copy all source files to the `dist` folder in a subfolder named after the project, e.g. `dist/PROJECT_v1.0.0`
+- install `node_modules` with `--production` flag, so only the production dependencies are installed
+- generate a version file
+- targz the folder
 
 ## Installation
 
@@ -78,16 +77,16 @@ Options
                                run'). In this case, the project name specified in the package.json file will
                                be used.
   --workdir-clean              Warn if the work directory is dirty
-  -t, --tag tag_type           Specify the type of Git tag to be set. [tag_type] can be either "lightweight"
-                               or "annotated" (or any abbreviation of these terms). If this parameter is not
-                               provided, no Git tag will be created.
-  --version-file filename      File name of version file to be written
+  --version-file filename      File name of version file to be written. If omitted, no version file will be
+                               generated.
   -b, --batch                  Enable batch mode. There are no interactions, no user confirmations etc.
                                Suitable for e.g. a build triggered by a CI server
   -o, --build-folder folder    Folder in which the build takes place. The contents of this folder will then
-                               be packaged to the output file. This parameter is mandatory.
+                               be packaged to the output file. Default is `dist`.
   -s, --source-folder folder   Folder containing the source file to be packaged. The contents of this folder
                                will be transferred to the build folder, then packaged to the output file.
-                               This parameter is mandatory.
+                               Default is `src`.
+  -z, --tar-gz                 Tarzip the result. When this option is given, the build folder will contain
+                               a folder with
   -h, --help                   Display this help message
-  ```
+```

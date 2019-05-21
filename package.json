@@ -1,10 +1,9 @@
 {
   "name": "@andimeier/deploy-node",
-  "version": "0.0.5",
+  "version": "0.0.4",
   "description": "Deployment made easy for node projects",
-  "main": "lib/deploy.js",
   "bin": {
-    "deploy": "bin/deploy.js"
+    "deploy": "bin/deploy-node.js"
   },
   "repository": {
     "type": "git",
@@ -14,7 +13,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "deploy"
+    "deploy",
+    "build"
   ],
   "author": "Alexander Eck-Zimmer",
   "license": "ISC",
@@ -23,6 +23,7 @@
     "camelcase": "^5.3.1",
     "chalk": "^2.4.2",
     "command-line-args": "^5.1.1",
+    "command-line-usage": "^5.0.5",
     "exit": "^0.1.2",
     "eyes": "^0.1.8",
     "fs": "0.0.1-security",
